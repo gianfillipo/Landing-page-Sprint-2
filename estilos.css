@@ -15,7 +15,7 @@ body {
     height: 90px;
     margin: 0;
     background-color: #F9FDF4;
-    border-bottom: 2px solid #34343481;
+    box-shadow: 0px 2px 8px #00000070;
 }
 .container {
     height: 100%;
@@ -25,7 +25,7 @@ body {
 }
 .header .container {
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 .navbar {
@@ -43,11 +43,21 @@ body {
     height: 800px;
     width: 100%;
     background-image: url(BG\ Tela\ inicial.png);
-    background-size: cover
+    background-size: cover;
 }
-a.btn {
+.txt-cta {
+    position: absolute;
+    color:#fff;
+    text-align: left;
+    top: 250px;
+    width: 600px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 200px;
+}
+a.cta {
     margin: 0px;
-    background-color: #5dc12b;
+    background-color: #6dc740;
     color: #ffffff;
     padding: 16px 50px 16px 50px;
     border-radius: 8px;
@@ -57,7 +67,22 @@ a.btn {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-
+    position: absolute;
+    box-shadow: 2px 2px 8px #00000070;
+}
+a.btn {
+    margin: 0px;
+    background-color: #6dc740;
+    color: #ffffff;
+    padding: 16px 40px 16px 40px;
+    border-radius: 8px;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 2px 8px #00000070;
 }
 .navbar li {
     margin: 16px;
@@ -71,8 +96,12 @@ a.btn:visited {
     text-decoration: none;
 }
 a.btn:hover {
-    background-color: #126401;
-    text-decoration: none;
+    background-color: #5dc12b;
+    border: 2px solid #343434;
+}
+a.cta:hover {
+    background-color: #5dc12b;
+    border: 2px solid #343434;
 }
 a.a1:link {
     height: 70px;
@@ -88,10 +117,10 @@ a.a1:visited {
 }
 a.a1:hover {
     font-weight: 750;
-    background-color: #006eff4b;
-    color: #343434;
-    border-bottom: 3px solid #006eff;
-    border-radius: 4px;
+    background-color: #b9d3e0;
+    color: #2c7da2;
+    border-bottom: 3px solid #2c7da2;
+    border-radius: 8px;
     padding: 10px 24px;
     text-align: center;
     align-items: center;
