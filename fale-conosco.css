@@ -20,7 +20,7 @@ body {
 }
 input {
     border: 0px;
-    border-bottom: 2px solid #343434;
+    border-bottom: 1px solid #343434;
     width: 100%;
     margin-top: 64px;
     font-size: 16px;
