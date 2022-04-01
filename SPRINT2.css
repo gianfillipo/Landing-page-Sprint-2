@@ -1,0 +1,83 @@
+body {
+    background-image: url(imgtelalog.jpg); background-repeat: no-repeat; background-size: 1500px 700px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.banner {
+    height: 2px;
+    background-image: url("imgtelalog.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    }
+    
+    .banner .card {
+    background-color: rgb(255, 255, 255);
+    height: 570px;
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20px;
+    }
+
+    .banner .titulo {
+    font-family:'Anybody', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(66, 65, 65);
+    }
+
+    .btn {
+        margin-top: 50px;
+        background-color:#3a65b0;
+        color: rgb(235, 231, 231);
+        border: 0px;
+    }
+
+    input {
+        height: 20px;
+        padding: 10px 5px;
+        margin: 22px 0;
+        border: none;
+        border-bottom: 1px solid gray;
+    }
+
+    .inputs-login{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+
+    .buttons-login {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 65%;        
+    }
+
+
+    .btn2 {
+        margin-top: 10px;
+        color:rgb(66, 65, 65);
+        background-color:white;
+        border: 0.5px solid rgb(240, 236, 236);
+    }
+
+    .btnGeral{
+        font-weight: 700;
+        font-size: 13px;
+        border-radius: 4px;
+        padding: 10px 0px;
+    }    
+
+    .hrefvoltar {
+        margin-top: 30px;
+        color: #3a65b0;
+    }
