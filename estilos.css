@@ -29,10 +29,10 @@ body {
     align-items: center;
 }
 .navbar li:first-child {
-    margin-left: 100px;
+    margin-left: 50px;
 }
 .navbar li:last-child {
-    margin-right: 200px;
+    margin-right: 150px;
 }
 .navbar {
     width: 800px;
@@ -78,8 +78,7 @@ a.cta {
 }
 a.btn {
     margin: 0px;
-    background-color: #6dc740;
-    color: #ffffff;
+    color: #5dc12b;
     padding: 16px 40px 16px 40px;
     border-radius: 8px;
     border: 0px;
@@ -88,8 +87,11 @@ a.btn {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+a.btn:hover {
     box-shadow: 2px 2px 8px #00000070;
-    border: 2px solid #6dc740;
+    background-color: #6dc740;
+    color: #ffffff;
 }
 .navbar li {
     margin: 16px;
@@ -97,14 +99,6 @@ a.btn {
 a.btn:link {
     color: #ffffff;
     text-decoration: none;
-}
-a.btn:visited {
-    color: #ffffff;
-    text-decoration: none;
-}
-a.btn:hover {
-    background-color: #5dc12b;
-    border: 2px solid #343434;
 }
 a.cta:hover {
     background-color: #5dc12b;
