@@ -26,7 +26,8 @@
 
                 <div class="inputs-login">
                     <input type="text" placeholder="ID funcionário">
-                    <input type="password" placeholder="Senha">
+                    <input id="in_password" type="password" placeholder="Senha">
+                    <input onclick="mostrarSenha()" id="in_check" type="checkbox"> Mostrar senha 
                 </div>
 
                 <div class="buttons-login">
@@ -46,3 +47,11 @@
 </body>
 
 </html>
+<script>
+    function mostrarSenha(){
+        in_password.type = "password"
+        if (in_check.checked == true) {
+            in_password.type = "text"
+        }
+    }
+</script>
