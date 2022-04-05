@@ -8,7 +8,6 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="login_page.css">
-
 </head>
 
 <body>
@@ -27,7 +26,10 @@
                 <div class="inputs-login">
                     <input type="text" placeholder="ID funcionário">
                     <input id="in_password" type="password" placeholder="Senha">
-                    <input onclick="mostrarSenha()" id="in_check" type="checkbox"> Mostrar senha 
+                    <div id="checkbox">
+                        <img id="password_image" src="http://cdn.onlinewebfonts.com/svg/img_374056.png"
+                            style="height: 10px;" onclick="mostrarSenha()">
+                    </div>
                 </div>
 
                 <div class="buttons-login">
@@ -35,23 +37,26 @@
                     <a class="btn2 btnGeral" href="../register_page/register_page.html">Cadastre-se</a>
                     <a class="hrefvoltar" href="../home_page/home_page.html">Voltar</a>
                 </div>
-                </div>
-
-                
-
             </div>
 
+
+
         </div>
+
+    </div>
     </div>
 
 </body>
 
 </html>
 <script>
-    function mostrarSenha(){
-        in_password.type = "password"
-        if (in_check.checked == true) {
+    function mostrarSenha() {
+        if (password_image.src == "http://cdn.onlinewebfonts.com/svg/img_374056.png") {
+            password_image.src = "http://cdn.onlinewebfonts.com/svg/img_238711.png"
             in_password.type = "text"
+        } else {
+            password_image.src = "http://cdn.onlinewebfonts.com/svg/img_374056.png"
+            in_password.type = "password"
         }
     }
 </script>
