@@ -100,7 +100,7 @@ input {
 }    
 
 .hrefvoltar {
-    margin-top: 30px;
+    margin-top: 48px;
     color: #3a65b0;
 }
 .btn:hover {
@@ -111,6 +111,14 @@ input {
 
 a{
     text-decoration: none;
+}
+
+#checkbox{
+    position: relative;
+    left: 85%;
+    bottom: 10%;
+    width: 10px;
+    height: 10px;
 }
 
 #password_image{

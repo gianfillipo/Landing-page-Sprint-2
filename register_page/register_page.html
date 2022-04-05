@@ -25,8 +25,17 @@
                 <div class="inputs-login">
                     <input type="text" placeholder="Insira seu ID">
                     <input type="text" placeholder="Insira seu e-mail">
-                    <input type="password" placeholder="Insira sua senha">
-                    <input type="password" placeholder="Confirme sua senha">
+                    
+                    <input id="in_password1" type="password" placeholder="Insira sua senha">
+                    <div id="checkbox1">
+                        <img id="password_image1" src="hidePassword.png" style="height: 10px;" onclick="mostrarSenha1()">
+                    </div>
+
+                    <input id="in_password2" type="password" placeholder="Confirme sua senha">
+                    <div id="checkbox2">
+                        <img id="password_image2" src="hidePassword.png" style="height: 10px;" onclick="mostrarSenha2()">
+                    </div>
+
                 </div>
 
                 <div class="buttons-login">
@@ -43,3 +52,26 @@
 </body>
 
 </html>
+<script>
+      function mostrarSenha1() {
+        
+        if (in_password1.type == "password") {
+            password_image1.src = "showPassword.png"
+            in_password1.type = "text"
+        } else {
+            password_image1.src = "hidePassword.png"
+            in_password1.type = "password"
+        }
+    }
+    
+    function mostrarSenha2() {
+        
+        if (in_password2.type == "password") {
+            password_image2.src = "showPassword.png"
+            in_password2.type = "text"
+        } else {
+            password_image2.src = "hidePassword.png"
+            in_password2.type = "password"
+        }
+    }
+</script>
