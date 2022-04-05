@@ -109,20 +109,17 @@ a{
     text-decoration: none;
 }
 
-#checkbox1{
+.checkbox{
     position: relative;
     left: 96%;
-    bottom: 5%;
-    width: 10px;
-    height: 10px;
+    bottom: 13%;
+    width: 16px;
+    height: 16px;
     cursor: pointer;
 }
 
-#checkbox2{
-    position: relative;
-    left: 96%;
-    bottom: 5%;
-    width: 10px;
-    height: 10px;
+.password_image{
     cursor: pointer;
+    filter: opacity(50%);
 }
+
