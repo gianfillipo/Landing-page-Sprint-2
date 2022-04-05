@@ -52,16 +52,17 @@ input {
     border: 0px;
     border-bottom: 1px solid #343434;
     width: 100%;
-    margin-top: 64px;
+    margin-top: 48px;
     font-size: 16px;
     outline: 0px;
-    }
+}
 
 .inputs-login{
     display: flex;
     flex-direction: column;
     width: 75%;
-    }
+    margin-top: 0px;
+}
 
 .buttons-login {
     margin-top: 24px;
@@ -69,9 +70,7 @@ input {
     flex-direction: column;
     text-align: center;
     width: 78%;        
-    }
-
-
+}
 .btn2 {
     margin-top: 24px;
     color: #343434;
@@ -96,12 +95,13 @@ input {
 }    
 
 .hrefvoltar {
-    margin-top: 30px;
+    margin-top: 24px;
     color: #3a65b0;
 }
 .btn:hover {
     background-color: #156E98;
-}.btn2:hover {
+}
+.btn2:hover {
     background-color: #E7E7E7;
 }
 
@@ -112,7 +112,7 @@ a{
 .checkbox{
     position: relative;
     left: 96%;
-    bottom: 13%;
+    bottom: 8%;
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -122,4 +122,3 @@ a{
     cursor: pointer;
     filter: opacity(50%);
 }
-
