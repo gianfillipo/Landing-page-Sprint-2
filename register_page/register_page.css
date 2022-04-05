@@ -22,7 +22,7 @@ button{
 .banner .card {
     background-color: #ffffff;
     width: 500px;
-    height: 680px;
+    height: 700px;
     text-align: center;
     border-radius: 24px;
     align-items: center;
@@ -107,4 +107,22 @@ input {
 
 a{
     text-decoration: none;
+}
+
+#checkbox1{
+    position: relative;
+    left: 85%;
+    bottom: 5%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+#checkbox2{
+    position: relative;
+    left: 85%;
+    bottom: 5%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
 }

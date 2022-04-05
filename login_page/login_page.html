@@ -27,8 +27,8 @@
                     <input type="text" placeholder="ID funcionário">
                     <input id="in_password" type="password" placeholder="Senha">
                     <div id="checkbox">
-                        <img id="password_image" src="http://cdn.onlinewebfonts.com/svg/img_374056.png"
-                            style="height: 10px;" onclick="mostrarSenha()">
+                        <img id="password_image" src="hidePassword.png"
+                            style="height: 10px;" onclick="mostrarSenha()" alt="hide">
                     </div>
                 </div>
 
@@ -51,11 +51,12 @@
 </html>
 <script>
     function mostrarSenha() {
-        if (password_image.src == "http://cdn.onlinewebfonts.com/svg/img_374056.png") {
-            password_image.src = "http://cdn.onlinewebfonts.com/svg/img_238711.png"
+        
+        if (in_password.type == "password") {
+            password_image.src = "showPassword.png"
             in_password.type = "text"
         } else {
-            password_image.src = "http://cdn.onlinewebfonts.com/svg/img_374056.png"
+            password_image.src = "hidePassword.png"
             in_password.type = "password"
         }
     }
