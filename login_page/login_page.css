@@ -59,6 +59,7 @@ input {
     margin-top: 64px;
     font-size: 16px;
     outline: 0px;
+    background-color: transparent;
     }
 
 .inputs-login{
@@ -116,11 +117,12 @@ a{
 #checkbox{
     position: relative;
     left: 96%;
-    bottom: 10%;
-    width: 10px;
-    height: 10px;
+    bottom: 13%;
+    width: 16px;
+    height: 16px;
 }
 
 #password_image{
     cursor: pointer;
+    filter: opacity(50%);
 }
