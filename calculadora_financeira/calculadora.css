@@ -75,7 +75,7 @@ input {
     width: 90%;
 }
 h4 {
-    margin-top: 24px;
+    margin-top: 16px;
     font-size: 16px;
     font-weight: 500;
     margin: 0px;
@@ -95,4 +95,12 @@ h4 {
 }
 .btn1:hover {
     background-color: #156E98;
+}
+.calc {
+    margin-top: 32px;
+    display: flex;
+}
+.resultados {
+    width: 400px;
+    display: none;
 }
