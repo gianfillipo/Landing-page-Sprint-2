@@ -23,23 +23,32 @@
     </div>
 
 
-    <h2 style="color: rgb(255, 160, 160);">CALCULADORA <span style="color: rgb(175, 255, 255);">FINANCEIRA </span></h2>
+    <h2 style="color: rgb(255, 160, 160);">CALCULADORA 
+        <span style="color: rgb(175, 255, 255);">
+            FINANCEIRA 
+        </span>
+    </h2>
 
     <img style="width: 150px;" src="carne.jpg"> <br> <br>
+    <div class="card">
+        <div class="inputs">
 
-    Informe o nome da empresa: <br>
-    <input placeholder="Nome da empresa" id="inp_nome"> <br> <br>
+            Informe o nome da empresa: <br>
+            <input placeholder="Nome da empresa" id="inp_nome"> <br>
+            
+            Informe a média do preço do seu produto: <br>
+            <input placeholder="R$" id="inp_preço"> <br>
+        
+            Informe o valor médio por mes que é produzido pela empresa: <br>
+            <input placeholder="/mes" id="inp_produto"> <br>
+        
+            Informe o valor de desperdicio (em %): <br>
+            <input placeholder="%" id="inp_desperdicio"> <br>
 
-    Informe a média do preço do seu produto: <br>
-    <input placeholder="R$" id="inp_preço"> <br> <br>
-
-    Informe o valor médio por mes que é produzido pela empresa: <br>
-    <input placeholder="/mes" id="inp_produto"> <br> <br>
-
-    Informe o valor de desperdicio (em %): <br>
-    <input placeholder="%" id="inp_desperdicio"> <br> <br>
-
-    <button onclick="resultado()">Ver resultado</button>
+        </div>
+        
+        <button class="btn1" onclick="resultado()">Ver resultado</button>
+    </div>
     <br> <br>
 
     <div id="div_avançar"></div>

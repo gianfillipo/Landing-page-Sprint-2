@@ -5,7 +5,6 @@ body {
     background-color: #F7F4FB;
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 .header {
     position: absolute;
@@ -26,6 +25,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+button{
+    cursor: pointer;
+}
 a.cta {
     background-color: #6dc740;
     color: #ffffff;
@@ -39,4 +41,52 @@ a.cta {
     display: inline-block;
     box-shadow: 2px 2px 8px #00000070;
     border: 2px solid #6dc740;
+}
+a.cta:hover {
+    background-color: #5dc12b;
+    border: 2px solid #343434;
+}
+.card {
+    background-color: #ffffff;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    border-radius: 24px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    border: 0px;
+    border-bottom: 1px solid #343434;
+    width: 80%;
+    margin-top: 24px;
+    font-size: 16px;
+    outline: 0px;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    height: 70%;
+    width: 90%;
+}
+.btn1 {
+    margin-top: 8px;
+    color: #ffffff;
+    padding: 16px 40px 16px 40px;
+    border-radius: 8px;
+    border: 2px solid #2C7DA2;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #2C7DA2;
+    box-shadow: 2px 2px 8px #00000070;
+}
+.btn1:hover {
+    background-color: #156E98;
 }
