@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Calculadora SPconsult</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="../home_page/home_page.html">
+                <img src="../home_page/imagens_home/Logo Monitore.png">
+            </a> 
+            
+            <a class="cta" href="../contact_page/contact_page.html">
+                Fale conosco
+            </a>
+        </div>
+    </div>
+
+
+    <h2 style="color: rgb(255, 160, 160);">CALCULADORA <span style="color: rgb(175, 255, 255);">FINANCEIRA </span></h2>
+
+    <img style="width: 150px;" src="carne.jpg"> <br> <br>
+
+    Informe o nome da empresa: <br>
+    <input placeholder="Nome da empresa" id="inp_nome"> <br> <br>
+
+    Informe a média do preço do seu produto: <br>
+    <input placeholder="R$" id="inp_preço"> <br> <br>
+
+    Informe o valor médio por mes que é produzido pela empresa: <br>
+    <input placeholder="/mes" id="inp_produto"> <br> <br>
+
+    Informe o valor de desperdicio (em %): <br>
+    <input placeholder="%" id="inp_desperdicio"> <br> <br>
+
+    <button onclick="resultado()">Ver resultado</button>
+    <br> <br>
+
+    <div id="div_avançar"></div>
+    <div id="div_calculo"></div>
+
+</body>
+
+</html>
+
+<script>
+    function resultado() {
+        var desp = Number(inp_desperdicio.value)
+        var prod = Number(inp_produto.value)
+        var prc = Number(inp_preço.value)
+        var prod_desp = (prod * (desp / 100)) * prc
+        var spprod = prod * desp / 100
+        var nome = (inp_nome.value)
+
+        div_avançar.innerHTML = ` 
+        <img style="width: 200px;" src="perda.jpg"> <br>
+        
+        Olá, <b style="color: red;">${inp_nome.value}</b>. Seu desperdício médio por mês é de 
+        <b style="color: red;">${desp.toFixed(1)}%</b>, com isso, sua empresa, que produz <b style="color: red;">${prod} produtos</b>, 
+        acaba perdendo por mês em torno de <b style="color: red;">${prod * (desp / 100)}</b> <b>deles</b>. 
+        <br> 
+        Sendo assim, com uma média de <b style="color: red;">R$ ${prc} por kg</b> seu prejuízo seria de
+        <b style="color: red;">R$ ${prod_desp.toFixed(2)}</b> <b>perdidos.</b>
+        
+        <br> <br>
+        
+        <button onclick="calculo()">Calcular como seria com a SPconsult</button>
+        
+        <br> <br>
+    `
+    }
+    function calculo() {
+        var desp = Number(inp_desperdicio.value)
+        var prod = Number(inp_produto.value)
+        var prc = Number(inp_preço.value)
+        var prod_desp = (prod * (desp / 100)) * prc
+        var spprod = prod * desp / 100
+
+        div_calculo.innerHTML = ` 
+        <img style="width: 100px;" src="logo.jpg"> <br>
+        Já com a nossa solução  garantimos que o percentual de desperdicio da <b style="color: green;">${inp_nome.value}</b>
+         diminuiria pelo menos em <b style="color: green;">${desp * 0.30.toFixed(1)}%</b>, sendo assim
+        de <b style="color: red;"> ${desp}% </b> para 
+        <b style="color: green;">${desp - (desp * 0.30.toFixed(1))}% </b>.
+        <br> 
+        Com isso ao invés empresa perder <b style="color: red;">${prod * (desp / 100)} produtos </b>, 
+        seu desperdício seria reduzido para 
+        <b style="color: green;">${spprod - (spprod * 0.30)} produtos</b>, perdendo assim apenas 
+        <b style="color: green;">${(prod * (desp / 100)) - (spprod - (spprod * 0.30))} produtos</b>.
+        Em dinheiro o que se perdia em torno de <b style="color: red;">R$ ${prod_desp.toFixed(2)}</b>, diminuiu para  
+        <b style="color: green;">R$ ${prod_desp - (prod_desp * 0.30).toFixed(2)}</b>,
+        uma diminuição de <b style="color: green;">R$ ${prod_desp - (prod_desp - (prod_desp * 0.30)).toFixed(2)}</b>
+        <br> <br>
+        `
+    }
+</script>
