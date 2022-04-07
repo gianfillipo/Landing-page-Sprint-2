@@ -28,32 +28,33 @@
             FINANCEIRA 
         </span>
     </h2>
+    <div class="calc">
 
-    <img style="width: 150px;" src="carne.jpg"> <br> <br>
-    <div class="card">
-        <div class="inputs">
-
-            <h4>Informe o nome da empresa:</h4>
-            <br>
-            <input placeholder="Nome da empresa" id="inp_nome"> <br>
+        <div class="card">
+            <div class="inputs">
+                
+                <h4>Informe o nome da empresa:</h4>
+                <br>
+             <input placeholder="Nome da empresa" id="inp_nome"> <br>
             
-            <h4>Informe a média do preço do seu produto:</h4> <br>
-            <input placeholder="R$" id="inp_preço"> <br>
+             <h4>Informe a média do preço do seu produto:</h4> <br>
+             <input placeholder="R$" id="inp_preço"> <br>
         
-            <h4>Informe o valor médio por mes que é produzido pela empresa:</h4> <br>
-            <input placeholder="/mes" id="inp_produto"> <br>
+             <h4>Informe o valor médio por mes que é produzido pela empresa:</h4> <br>
+             <input placeholder="/mes" id="inp_produto"> <br>
         
-            <h4>Informe o valor de desperdicio (em %):</h4> <br>
-            <input placeholder="%" id="inp_desperdicio"> <br>
+             <h4>Informe o valor de desperdicio (em %):</h4> <br>
+             <input placeholder="%" id="inp_desperdicio"> <br>
 
-        </div>
-        <br>
-        <button class="btn1" onclick="resultado()">Ver resultado</button>
+            </div>
+         <br>
+         <button class="btn1" onclick="resultado()">Ver resultado</button>
+       </div>
+       <div class="resultados" id="idResultado">
+           <div id="div_avançar"></div>
+           <div id="div_calculo"></div>
+       </div>
     </div>
-    <br> <br>
-
-    <div id="div_avançar"></div>
-    <div id="div_calculo"></div>
 
 </body>
 
@@ -68,6 +69,8 @@
         var spprod = prod * desp / 100
         var nome = (inp_nome.value)
 
+        idResultado.style.display="block"
+        
         div_avançar.innerHTML = ` 
         <img style="width: 200px;" src="perda.jpg"> <br>
         
