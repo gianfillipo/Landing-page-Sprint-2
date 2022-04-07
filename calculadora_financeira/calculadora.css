@@ -61,7 +61,7 @@ input {
     border: 0px;
     border-bottom: 1px solid #343434;
     width: 80%;
-    margin-top: 24px;
+    margin-top: 0px;
     font-size: 16px;
     outline: 0px;
 }
@@ -69,9 +69,16 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     margin-top: 32px;
     height: 70%;
     width: 90%;
+}
+h4 {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0px;
 }
 .btn1 {
     margin-top: 8px;
@@ -83,7 +90,6 @@ input {
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     background-color: #2C7DA2;
     box-shadow: 2px 2px 8px #00000070;
 }
