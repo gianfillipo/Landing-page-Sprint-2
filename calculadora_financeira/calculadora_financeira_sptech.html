@@ -14,8 +14,8 @@
         <div class="container">
             <a href="../home_page/home_page.html">
                 <img src="../home_page/imagens_home/Logo Monitore.png">
-            </a> 
-            
+            </a>
+
             <a class="cta" href="../contact_page/contact_page.html">
                 Fale conosco
             </a>
@@ -23,37 +23,40 @@
     </div>
 
 
-    <h2 style="color: rgb(255, 160, 160);">CALCULADORA 
+    <h2 style="color: rgb(255, 160, 160);">CALCULADORA
         <span style="color: rgb(175, 255, 255);">
-            FINANCEIRA 
+            FINANCEIRA
         </span>
     </h2>
-    <div class="calc">
+    <div class="container_2">
 
-        <div class="card">
-            <div class="inputs">
-                
-                <h4>Informe o nome da empresa:</h4>
+        <div class="calc">
+
+            <div class="card">
+                <div class="inputs">
+
+                    <h4>Informe o nome da empresa:</h4>
+                    <br>
+                    <input placeholder="Nome da empresa" id="inp_nome"> <br>
+
+                    <h4>Informe a média do preço do seu produto:</h4> <br>
+                    <input placeholder="R$" id="inp_preço"> <br>
+
+                    <h4>Informe o valor médio mensal produzido pela empresa:</h4> <br>
+                    <input placeholder="R$" id="inp_produto"> <br>
+
+                    <h4>Informe o valor de desperdicio (em %):</h4> <br>
+                    <input placeholder="%" id="inp_desperdicio"> <br>
+
+                </div>
                 <br>
-             <input placeholder="Nome da empresa" id="inp_nome"> <br>
-            
-             <h4>Informe a média do preço do seu produto:</h4> <br>
-             <input placeholder="R$" id="inp_preço"> <br>
-        
-             <h4>Informe o valor médio por mes que é produzido pela empresa:</h4> <br>
-             <input placeholder="/mes" id="inp_produto"> <br>
-        
-             <h4>Informe o valor de desperdicio (em %):</h4> <br>
-             <input placeholder="%" id="inp_desperdicio"> <br>
-
+                <button class="btn1" onclick="resultado()">Ver resultado</button>
             </div>
-         <br>
-         <button class="btn1" onclick="resultado()">Ver resultado</button>
-       </div>
-       <div class="resultados" id="idResultado">
-           <div id="div_avançar"></div>
-           <div id="div_calculo"></div>
-       </div>
+            <div class="resultados_1" id="idResultado">
+                <div class="resultado_avancar" id="div_avançar"></div>
+                <div class="resultado_calculo" id="div_calculo"></div>
+            </div>
+        </div>
     </div>
 
 </body>
@@ -69,21 +72,17 @@
         var spprod = prod * desp / 100
         var nome = (inp_nome.value)
 
-        idResultado.style.display="block"
-        
+        idResultado.style.display = "block"
+
         div_avançar.innerHTML = ` 
-        <img style="width: 200px;" src="perda.jpg"> <br>
-        
-        Olá, <b style="color: red;">${inp_nome.value}</b>. Seu desperdício médio por mês é de 
-        <b style="color: red;">${desp.toFixed(1)}%</b>, com isso, sua empresa, que produz <b style="color: red;">${prod} produtos</b>, 
-        acaba perdendo por mês em torno de <b style="color: red;">${prod * (desp / 100)}</b> <b>deles</b>. 
+        Olá, <b style="color: red;">${inp_nome.value}</b> seu desperdício médio por mês é de <b style="color: red;">${desp.toFixed(1)}%</b>, com isso, sua empresa, que produz <b style="color: red;">${prod} produtos</b>, acaba perdendo por mês em torno de <b style="color: red;">${prod * (desp / 100)}</b> <b>deles</b>. 
         <br> 
         Sendo assim, com uma média de <b style="color: red;">R$ ${prc} por kg</b> seu prejuízo seria de
         <b style="color: red;">R$ ${prod_desp.toFixed(2)}</b> <b>perdidos.</b>
         
         <br> <br>
         
-        <button onclick="calculo()">Calcular como seria com a SPconsult</button>
+        <button onclick="calculo()" id="button_1">Calcule as vantagens com a Monitore</button>
         
         <br> <br>
     `
@@ -96,19 +95,10 @@
         var spprod = prod * desp / 100
 
         div_calculo.innerHTML = ` 
-        <img style="width: 100px;" src="logo.jpg"> <br>
-        Já com a nossa solução  garantimos que o percentual de desperdicio da <b style="color: green;">${inp_nome.value}</b>
-         diminuiria pelo menos em <b style="color: green;">${desp * 0.30.toFixed(1)}%</b>, sendo assim
-        de <b style="color: red;"> ${desp}% </b> para 
-        <b style="color: green;">${desp - (desp * 0.30.toFixed(1))}% </b>.
+        Já com a nossa solução  garantimos que o percentual de desperdicio da <b style="color: green;">${inp_nome.value} diminuiria pelo menos em <b style="color: green;">${desp * 0.30.toFixed(1)}%</b>, sendo assim de <b style="color: red;"> ${desp}% </b> para <b style="color: green;">${desp - (desp * 0.30.toFixed(1))}% </b>.
         <br> 
-        Com isso ao invés empresa perder <b style="color: red;">${prod * (desp / 100)} produtos </b>, 
-        seu desperdício seria reduzido para 
-        <b style="color: green;">${spprod - (spprod * 0.30)} produtos</b>, perdendo assim apenas 
-        <b style="color: green;">${(prod * (desp / 100)) - (spprod - (spprod * 0.30))} produtos</b>.
-        Em dinheiro o que se perdia em torno de <b style="color: red;">R$ ${prod_desp.toFixed(2)}</b>, diminuiu para  
-        <b style="color: green;">R$ ${prod_desp - (prod_desp * 0.30).toFixed(2)}</b>,
-        uma diminuição de <b style="color: green;">R$ ${prod_desp - (prod_desp - (prod_desp * 0.30)).toFixed(2)}</b>
+        Com isso ao invés empresa perder <b style="color: red;">${prod * (desp / 100)} produtos </b>, seu desperdício seria reduzido para <b style="color: green;">${spprod - (spprod * 0.30)} produtos</b>, perdendo assim apenas <b style="color: green;">${(prod * (desp / 100)) - (spprod - (spprod * 0.30))} produtos</b>.
+        Em dinheiro o que se perdia em torno de <b style="color: red;">R$ ${prod_desp.toFixed(2)}</b>, diminuiu para <b style="color: green;">R$ ${prod_desp - (prod_desp * 0.30).toFixed(2)}</b>, uma diminuição de <b style="color: green;">R$ ${prod_desp - (prod_desp - (prod_desp * 0.30)).toFixed(2)}</b>
         <br> <br>
         `
     }

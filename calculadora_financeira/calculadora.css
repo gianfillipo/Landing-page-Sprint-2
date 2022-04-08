@@ -56,6 +56,7 @@ a.cta:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 300px;
 }
 input {
     border: 0px;
@@ -96,11 +97,66 @@ h4 {
 .btn1:hover {
     background-color: #156E98;
 }
+.container_2 {
+    background-image: url(../calculadora_financeira/imgs_calculadora/back-\ cal.jpg);
+    background: cover !important;
+    width: 100%;
+    height: 750px;
+    justify-content: center;
+    align-items : center;
+    }
 .calc {
-    margin-top: 32px;
+    margin-top: 80px;
+    margin-left: 100px;
     display: flex;
 }
-.resultados {
-    width: 400px;
+.resultados_1  {
+    width: 500px;
     display: none;
+    padding: 16px 50px 16px 50px ;
+    background-color:white;
+    border-radius : 26px ;
+justify-items: center;
+box-shadow: 2px 2px 8px #00000070;
+    margin-left: 170px;
+    
+
+}
+.resultado_avancar  {
+width: 500px;
+height: 270px;
+margin-top: 25px;
+border-bottom: 3px solid #000000;
+background-color: white; 
+position: absolute;
+z-index: 9999;
+align-items: center;
+flex-direction: column;
+
+}
+.resultado_calculo {
+    width: 500px;
+    height: 225px;
+    margin-top: 360px;
+    background-color: white;
+    position: absolute;
+    z-index: 9998;
+    border-radius: 14px;
+    align-items: center;
+    flex-direction: column;
+}
+#button_1 {
+margin-top:59px; 
+margin-left: 110px; 
+display: inline-block;
+color: #ffffff;
+padding: 14px 35px 14px 35px;
+border-radius: 8px;
+border: 2px solid #2C7DA2;
+font-size: 16px;
+font-weight: 600;
+text-align: center;
+text-decoration: none;
+background-color: #2C7DA2;
+box-shadow: 2px 2px 8px #00000070;
 }
