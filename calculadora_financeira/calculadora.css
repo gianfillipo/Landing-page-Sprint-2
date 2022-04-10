@@ -8,7 +8,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .header {
-    position: absolute;
     width: 100%;
     height: 90px;
     margin: 0;
@@ -18,7 +17,7 @@ body {
 .container {
     height: 100%;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
 }
 .header .container {
@@ -50,20 +49,19 @@ a.cta:hover {
 .container_2 {
     background-image: url(../calculadora_financeira/imgs_calculadora/back-\ cal.jpg);
     background: cover !important;
+    display:flex;
     justify-content:center;
     justify-self: center;
     align-items:center;
     width: 100%;
     height: 750px;
 }
-.calc {
-    margin-top: 100px;
+.calc{
     width: 90%;
     display: flex;
     justify-content: center;
-    justify-self: center;
-    align-items:center;
     border: 2px solid red;
+    margin: auto;
 }
 .card {
     background-color: #ffffff;
@@ -73,18 +71,33 @@ a.cta:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 40px 0px 0px 40px;
+    border-radius: 40px;    
+    z-index: 1;
+    transition: border-radius 1s;
 }
+.card.hide{
+    border-radius: 40px 0 0 40px; 
+}
+
 .resultados_1  {
+    position: absolute;
+    right: 35%;
     background-color: #6dc740;
     height: 650px;
-    width: 30%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border-radius: 0px 40px 40px 0px;
+    overflow:hidden;
+    z-index: 0;
+    transition: 1s right ease-in-out;
 }
+.resultados_1.show {
+    right: 12%;
+}
+
+
 input {
     border: 0px;
     border-bottom: 1px solid #343434;
@@ -126,15 +139,26 @@ h4 {
 }
 .resultado_avancar  {
     width: 80%;
-    position: absolute;
-    align-items: center;
-    flex-direction: column;
+    padding: 20px;
+    color: white;
 }
+.resultado_avancar button{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
 .resultado_calculo {
     width: 80%;
-    position: absolute;
-    align-items: center;
-    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    color: white;
+    transition: opacity .5s linear;
+}
+.resultado_calculo.show{
+    opacity: 1;
 }
 #button_1 {
     display:block;
@@ -148,4 +172,15 @@ h4 {
     background-color: #2C7DA2;
     box-shadow: 2px 2px 8px #00000070;
     color: #ffffff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
