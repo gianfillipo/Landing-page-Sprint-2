@@ -12,9 +12,8 @@
 <body>
     <div class="header">
         <div class="container">
-            <a href="../home_page/home_page.html">
-                <img src="../home_page/imagens_home/Logo Monitore.png">
-            </a>
+            
+                <img src="../home_page/imagens_home/Logo Monitore.png" onclick="home()">
 
             <a class="cta" href="../contact_page/contact_page.html">
                 Fale conosco
@@ -102,5 +101,8 @@
         R$ ${desperdicio_producao - (desperdicio_producao - (desperdicio_producao * 0.30)).toFixed(2)}
         </p>
         `
+    }
+    function home() {
+        window.location.href = "../home_page/home_page.html"
     }
 </script>
