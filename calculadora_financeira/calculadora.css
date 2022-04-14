@@ -78,7 +78,6 @@ a.cta:hover {
 .card.hide{
     border-radius: 40px 0 0 40px; 
 }
-
 .resultados_1  {
     position: absolute;
     right: 35%;
@@ -96,8 +95,6 @@ a.cta:hover {
 .resultados_1.show {
     right: 12%;
 }
-
-
 input {
     border: 0px;
     border-bottom: 1px solid #343434;
@@ -149,7 +146,6 @@ h4 {
     align-items: center;
     margin-top: 40px;
 }
-
 .resultado_calculo {
     width: 80%;
     padding: 20px;
@@ -173,13 +169,11 @@ h4 {
     box-shadow: 2px 2px 8px #00000070;
     color: #ffffff;
 }
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
