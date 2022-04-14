@@ -152,9 +152,9 @@ a.a1:hover {
     margin-top: 10px;
 }
 .container_rodape {
+    margin-top: 50px;
     height: 90%;
     width: 80%;
-    border: 2px solid red;
     display: flex;
 }
 .contato {
@@ -195,12 +195,10 @@ a.a1:hover {
     flex-direction: column;
     justify-items: start;
 }
-.pags.a2.parceria-icon{
-    border: 2px solid yellow;
-    margin-right: 30px;
+#parceria-icon{
+    padding-right: 8px;
 }
 .a2{
-    border: 2px solid red;
     width: fit-content;
     padding: 16px;
     color: #F7F4FB;
@@ -213,13 +211,22 @@ a.a1:hover {
     background-color: none;
 }
 .legal {
-    border: 2px solid red;
-    background-color: #F7F4FB;
     width: 35%;
-    display: table-column;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     position: relative;
+}
+.a3{
+    width: fit-content;
+    padding: 16px;
+    color: #F7F4FB;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+}
+.termos{
+    margin-top: 17%;
 }
 a.cta_rodape {
     background-color: #6dc740;
