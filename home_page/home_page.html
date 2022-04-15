@@ -10,19 +10,21 @@
 </head>
 
 <body>
-
+<!-- Cabeçalho -->
     <div class="header" id="Cabecalho">
         <div class="container">
             <img src="imagens_home/Logo Monitore.png" width="">
 
             <ul class="navbar">
-                <li><a class="a1" href="">SERVIÇOS</a></li>
-                <li><a class="a1" href="">PROJETOS</a></li>
+                <li><a class="a1" href="#serviços">SERVIÇOS</a></li>
+                <li><a class="a1" href="#projetos">PROJETOS</a></li>
                 <li><a class="a1" href="">SOBRE NÓS</a></li>
             </ul>
             <a class="btn" href="../login_page/login_page.html"><u>ACESSO</u></a>
         </div>
     </div>
+<!-- Inicio -->
+    <button onclick="back_top()" id="floatBtn" title="De volta ao topo"><img src="../home_page/imagens_home/Arrow-back-to-top.png"></button>
     <div class="banner">
         <div class="container">
             <div class="txt-cta"> Consultoria especializada no controle de refrigeração, gerando <span
@@ -33,6 +35,7 @@
             </div>
         </div>
     </div>
+<!-- Valores -->
     <div>
         <div class="valores">
             <div class="vlr1">
@@ -1098,7 +1101,53 @@
             </div>
         </div>
     </div>
-
+<!-- Corpo -->
+    <div class="corpo">
+        <div class="container_corpo">
+            <div id="serviços">
+<!-- Card1 -->
+                <div class="card_serviços1">
+                    <div class="capa1">
+                        <img class="img_capa1" src="http://blog.vhsys.com.br/wp-content/uploads/2019/09/Servi%C3%A7o-VHSYS1.png">
+                    </div>
+                    <div class="txt_baixo">
+                        <h3>titulo</h3>
+                    </div>
+                </div>
+<!-- Card2 -->
+                <div class="card_serviços2">
+                    <div class="capa2">
+                        <img class="img_capa2" src="http://blog.vhsys.com.br/wp-content/uploads/2019/09/Servi%C3%A7o-VHSYS1.png">
+                    </div>
+                    <div class="txt_baixo">
+                        <h3>titulo</h3>
+                    </div>
+                </div>
+            </div>
+<!-- pag_projetos -->
+    <div id="projetos">
+<!-- Card_p1 -->
+                <div class="card_projeto1">
+                    <div class="capa_p1">
+                        <img class="img_capa_p1" src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2018/11/capa-blog-2.png">
+                    </div>
+                    <div class="txt_baixo_p">
+                        <h3>titulo</h3>
+                    </div>
+                </div>
+<!-- Card_p2 -->
+                <div class="card_projeto2">
+                    <div class="capa_p2">
+                        <img class="img_capa_p2" src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2018/11/capa-blog-2.png">
+                    </div>
+                    <div class="txt_baixo_p">
+                    <h3>titulo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Rodapé -->
     <div class="rodape">
         <div id="scroll"></div>
         <div class="container_rodape">
@@ -1148,5 +1197,25 @@
 
     </div>
 </body>
-
 </html>
+<!-- Botão -->
+<script>
+    // Selecionar botão
+mybutton = document.getElementById("floatBtn");
+
+// Ao rolar 500px o botão aparece
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// Ao clicar o botão te leva ao topo
+function back_top() {
+  document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+}
+</script>
