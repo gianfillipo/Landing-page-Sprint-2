@@ -149,11 +149,10 @@ a.cta:hover {
     cursor: pointer;
     padding: 16px;
     border-radius: 999999px;
-  }
-  
-  #floatBtn:hover {
+}
+#floatBtn:hover {
     background-color: #343434;
-  }
+}
 .valores {
     display: flex;
     width: 100%;

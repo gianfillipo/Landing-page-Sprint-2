@@ -6,19 +6,16 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
 button{
     cursor: pointer;
 }
-
 .container{
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-    
+}  
 .banner .card {
     background-color: #ffffff;
     width: 500px;
@@ -30,14 +27,12 @@ button{
     flex-direction: column;
     align-items: center;
 }
-
 .banner .titulo {
     margin-top: 32px;
     font-size: 32px;
     font-weight: bold;
     color: rgb(66, 65, 65);
 }
-
 .btn {
     color: #ffffff;
     border: 2px solid #2C7DA2;
@@ -47,7 +42,6 @@ button{
     background-color: #2C7DA2;
     box-shadow: 2px 2px 8px #00000070;
 }
-
 input {
     border: 0px;
     border-bottom: 1px solid #343434;
@@ -56,14 +50,12 @@ input {
     font-size: 16px;
     outline: 0px;
 }
-
 .inputs-login{
     display: flex;
     flex-direction: column;
     width: 75%;
     margin-top: 0px;
 }
-
 .buttons-login { 
     height: 700px;
     width: 78%;   
@@ -86,14 +78,12 @@ input {
     background-color: #ffffff;
     box-shadow: 2px 2px 8px #00000070;
 }
-
 .btnGeral{
     font-weight: 700;
     font-size: 16px;
     border-radius: 4px;
     padding: 10px 0px;
 }    
-
 .hrefvoltar {
     color: #3a65b0;
 }
@@ -103,11 +93,9 @@ input {
 .btn2:hover {
     background-color: #E7E7E7;
 }
-
 a{
     text-decoration: none;
 }
-
 .checkbox{
     position: relative;
     left: 96%;
@@ -116,12 +104,12 @@ a{
     height: 16px;
     cursor: pointer;
 }
-
 .password_image{
     cursor: pointer;
     filter: opacity(50%);
 }
-
 .password_image:hover{
-    filter: opacity(0.4) drop-shadow(0 0 0 red);
+    filter: opacity(0.4);
+    box-shadow: #2C7DA2;
+
 }
