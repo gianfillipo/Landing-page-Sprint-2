@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home_page.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Inicio</title>
 </head>
 
 <body>
-<!-- Cabeçalho -->
+    <!-- Cabeçalho -->
     <div class="header" id="Cabecalho">
         <div class="container">
             <img src="imagens_home/Logo Monitore.png" width="">
@@ -18,13 +19,14 @@
             <ul class="navbar">
                 <li><a class="a1" href="#serviços">SERVIÇOS</a></li>
                 <li><a class="a1" href="#projetos">PROJETOS</a></li>
-                <li><a class="a1" href="">SOBRE NÓS</a></li>
+                <li><a class="a1" href="#carrosel">SOBRE NÓS</a></li>
             </ul>
             <a class="btn" href="../login_page/login_page.html"><u>ACESSO</u></a>
         </div>
     </div>
-<!-- Inicio -->
-    <button onclick="back_top()" id="floatBtn" title="De volta ao topo"><img src="../home_page/imagens_home/Arrow-back-to-top.png"></button>
+    <!-- Inicio -->
+    <button onclick="back_top()" id="floatBtn" title="De volta ao topo"><img
+            src="../home_page/imagens_home/Arrow-back-to-top.png"></button>
     <div class="banner">
         <div class="container">
             <div class="txt-cta"> Consultoria especializada no controle de refrigeração, gerando <span
@@ -35,7 +37,7 @@
             </div>
         </div>
     </div>
-<!-- Valores -->
+    <!-- Valores -->
     <div>
         <div class="valores">
             <div class="vlr1">
@@ -1101,59 +1103,208 @@
             </div>
         </div>
     </div>
-<!-- Corpo -->
+    <!-- Corpo -->
     <div class="corpo">
         <div class="container_corpo">
             <div id="serviços">
-<!-- Card1 -->
+                <!-- Card1 -->
                 <div class="card_serviços1">
                     <div class="capa1">
-                        <img class="img_capa1" src="http://blog.vhsys.com.br/wp-content/uploads/2019/09/Servi%C3%A7o-VHSYS1.png">
+                        <img class="img_capa1"
+                            src="http://blog.vhsys.com.br/wp-content/uploads/2019/09/Servi%C3%A7o-VHSYS1.png">
                     </div>
                     <div class="txt_baixo">
                         <h3>titulo</h3>
                     </div>
                 </div>
-<!-- Card2 -->
+                <!-- Card2 -->
                 <div class="card_serviços2">
                     <div class="capa2">
-                        <img class="img_capa2" src="http://blog.vhsys.com.br/wp-content/uploads/2019/09/Servi%C3%A7o-VHSYS1.png">
+                        <img class="img_capa2"
+                            src="http://blog.vhsys.com.br/wp-content/uploads/2019/09/Servi%C3%A7o-VHSYS1.png">
                     </div>
                     <div class="txt_baixo">
                         <h3>titulo</h3>
                     </div>
                 </div>
             </div>
-<!-- pag_projetos -->
-    <div id="projetos">
-<!-- Card_p1 -->
+            <!-- pag_projetos -->
+            <div id="projetos">
+                <!-- Card_p1 -->
                 <div class="card_projeto1">
                     <div class="capa_p1">
-                        <img class="img_capa_p1" src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2018/11/capa-blog-2.png">
+                        <img class="img_capa_p1"
+                            src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2018/11/capa-blog-2.png">
                     </div>
                     <div class="txt_baixo_p">
                         <h3>titulo</h3>
                     </div>
                 </div>
-<!-- Card_p2 -->
+                <!-- Card_p2 -->
                 <div class="card_projeto2">
                     <div class="capa_p2">
-                        <img class="img_capa_p2" src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2018/11/capa-blog-2.png">
+                        <img class="img_capa_p2"
+                            src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2018/11/capa-blog-2.png">
                     </div>
                     <div class="txt_baixo_p">
-                    <h3>titulo</h3>
+                        <h3>titulo</h3>
                     </div>
                 </div>
             </div>
+            
+            <!-- Carrosel -->
+            <div class="swiper mySwiper carrosel">
+                <div class="carrosel_container">
+                    <div class="carrosel_content">
+                        <!--Slide 1-->
+                        <!-- Card 1-->
+                        <div class=" carrosel_card">
+                            <div class="carrosel_card_content">
+
+                                <div class="carrosel_image">
+                                    <img src="https://www.cnnbrasil.com.br/wp-content/uploads/2021/06/21995_47022457A67E1FF5.jpg"
+                                        alt="">
+                                </div>
+
+                                <div class="carrosel_media_icons">
+                                    <img src="imagens_home/facebookSymbol.png" alt="">
+                                    <img src="imagens_home/instagramSymbol.png" alt="">
+                                    <img src="imagens_home/linkedinSymbol.png" alt="">
+                                </div>
+
+                                <div class="carrosel_nome">Neymar JR</div>
+                                <div class="carrosel_profissao">Desenvolvedor</div>
+                                <div class="carrosel_email">neymar.jr@sptech.school</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2-->
+                        <div id="carrosel" class="carrosel_card">
+                            <div class="carrosel_card_content">
+
+                                <div class="carrosel_image">
+                                    <img src="https://img.redbull.com/images/c_crop,x_1067,y_0,h_2133,w_2133/c_fill,w_270,h_270/q_auto,f_auto/redbullcom/2020/1/7/cpvoh0cnzs1irdllacqm/futebol-neymar-jr-2019"
+                                        alt="">
+                                </div>
+
+                                <div class="carrosel_media_icons">
+                                    <img src="imagens_home/facebookSymbol.png" alt="">
+                                    <img src="imagens_home/instagramSymbol.png" alt="">
+                                    <img src="imagens_home/linkedinSymbol.png" alt="">
+                                </div>
+
+                                <div class="carrosel_nome">Neymar JR</div>
+                                <div class="carrosel_profissao">Desenvolvedor</div>
+                                <div class="carrosel_email">neymar.jr@sptech.school</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3-->
+                        <div class="carrosel_card">
+                            <div class="carrosel_card_content">
+
+                                <div class="carrosel_image">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Jj89Vtg9Hs0CPTrxN6gWxcq4YKqtKOSZI9PxjCD1efq3gLDwDQ3x0Xc_WKrM9UqMeCM&usqp=CAU"
+                                        alt="">
+                                </div>
+
+                                <div class="carrosel_media_icons">
+                                    <img src="imagens_home/facebookSymbol.png" alt="">
+                                    <img src="imagens_home/instagramSymbol.png" alt="">
+                                    <img src="imagens_home/linkedinSymbol.png" alt="">
+                                </div>
+
+                                <div class="carrosel_nome">Neymar JR</div>
+                                <div class="carrosel_profissao">Desenvolvedor</div>
+                                <div class="carrosel_email">neymar.jr@sptech.school</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4-->
+                        <div class="carrosel_card">
+                            <div class="carrosel_card_content">
+
+                                <div class="carrosel_image">
+                                    <img src="https://img.estadao.com.br/resources/jpg/3/6/1492368834663.jpg" alt="">
+                                </div>
+
+                                <div class="carrosel_media_icons">
+                                    <img src="imagens_home/facebookSymbol.png" alt="">
+                                    <img src="imagens_home/instagramSymbol.png" alt="">
+                                    <img src="imagens_home/linkedinSymbol.png" alt="">
+                                </div>
+
+                                <div class="carrosel_nome">Neymar JR</div>
+                                <div class="carrosel_profissao">Desenvolvedor</div>
+                                <div class="carrosel_email">neymar.jr@sptech.school</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5-->
+                        <div class="carrosel_card">
+                            <div class="carrosel_card_content">
+
+                                <div class="carrosel_image">
+                                    <img src="https://www.futebolnaveia.com.br/wp-content/uploads/2020/08/Hoje-e-NeyDay.jpg"
+                                        alt="">
+                                </div>
+
+                                <div class="carrosel_media_icons">
+                                    <img src="imagens_home/facebookSymbol.png" alt="">
+                                    <img src="imagens_home/instagramSymbol.png" alt="">
+                                    <img src="imagens_home/linkedinSymbol.png" alt="">
+                                </div>
+
+                                <div class="carrosel_nome">Neymar JR</div>
+                                <div class="carrosel_profissao">Desenvolvedor</div>
+                                <div class="carrosel_email">neymar.jr@sptech.school</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6-->
+                        <div class="carrosel_card">
+                            <div class="carrosel_card_content">
+
+                                <div class="carrosel_image">
+                                    <img src="https://conteudo.imguol.com.br/c/esporte/14/2020/10/20/memes-do-neyday-1603203196874_v2_450x337.jpg.webp"
+                                        alt="">
+                                </div>
+
+                                <div class="carrosel_media_icons">
+                                    <img src="imagens_home/facebookSymbol.png" alt="">
+                                    <img src="imagens_home/instagramSymbol.png" alt="">
+                                    <img src="imagens_home/linkedinSymbol.png" alt="">
+                                </div>
+
+                                <div class="carrosel_nome">Neymar JR</div>
+                                <div class="carrosel_profissao">Desenvolvedor</div>
+                                <div class="carrosel_email">neymar.jr@sptech.school</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrosel_button_container">
+                        <img onclick="moverDireita()" class="carroselButton nextButton" src="imagens_home/nextIcon.png"
+                            alt="">
+                        <img onclick="moverEsquerda()" class="carroselButton prevButton none"
+                            src="imagens_home/prevIcon.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--Fim Carrosel-->
         </div>
+
     </div>
-<!-- Rodapé -->
+
+
+
+    <!-- Rodapé -->
     <div class="rodape">
         <div id="scroll"></div>
         <div class="container_rodape">
             <div class="contato">
                 <div class="informacoes_contato">
-                    <img class="img_rodape" src="imagens_home/Logo Monitore.png" style="height: 400px;width: 300px;"> <br>
+                    <img class="img_rodape" src="imagens_home/Logo Monitore.png" style="height: 400px;width: 300px;">
+                    <br>
                     <div class="contato_imagem">
                         <img src="imagens_home/mail-icon-white-12.png" alt="">
                         <span>spconsult.contato@gmail.com</span>
@@ -1174,7 +1325,8 @@
             </div>
 
             <div class="pags">
-                <a class="a2" id="a2-parceria" href=""><img id="parceria-icon" src="../home_page/imagens_home/partnership-icon.png">Empresas parceiras</a>
+                <a class="a2" id="a2-parceria" href=""><img id="parceria-icon"
+                        src="../home_page/imagens_home/partnership-icon.png">Empresas parceiras</a>
                 <a class="a2" href="#Cabecalho">Inicio</a>
                 <a class="a2" href="">Serviços</a>
                 <a class="a2" href="">Projetos</a>
@@ -1194,28 +1346,83 @@
 
         </div>
 
-
     </div>
 </body>
+
 </html>
 <!-- Botão -->
 <script>
     // Selecionar botão
-mybutton = document.getElementById("floatBtn");
+    mybutton = document.getElementById("floatBtn");
 
-// Ao rolar 500px o botão aparece
-window.onscroll = function() {scrollFunction()};
+    // Ao rolar 500px o botão aparece
+    window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+    function scrollFunction() {
 
-// Ao clicar o botão te leva ao topo
-function back_top() {
-  document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
-}
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // Ao clicar o botão te leva ao topo
+    function back_top() {
+        document.documentElement.scrollTop = 280; // Chrome, Firefox, IE and Opera
+    }
+
+
+    // Carrosel
+    var card = document.getElementsByClassName('carrosel_card')
+    var prevButton = document.getElementsByClassName('prevButton')
+    var click = 1
+    
+    function moverEsquerda() {
+
+        if (click == 2) {
+            for (var contador = 0; contador <= card.length - 1; contador++) {
+                card[contador].style.transform = "translateX(0px)";
+                prevButton[0].classList.add('none')
+            }
+            click--
+        }
+        if (click == 3) {
+            for (var contador = 0; contador <= card.length - 1; contador++) {
+                card[contador].style.transform = "translateX(-800px)";
+            }
+            click--
+        } 
+        
+        
+    }
+
+    function moverDireita() {
+
+        if (click <= 2) {
+            if (click == 1) {
+                for (var contador = 0; contador <= card.length - 1; contador++) {
+                    card[contador].style.transform = "translateX(-800px)";
+                    prevButton[0].classList.remove('none');
+                }
+            }
+            if (click > 1) {
+                for (var contador = 0; contador <= card.length - 1; contador++) {
+                    card[contador].style.transform = "translateX(-1240px)";
+                }
+            }
+            click++
+        } else {
+            for (var contador = 0; contador <= card.length - 1; contador++) {
+                card[contador].style.transform = "translateX(0px)";
+                prevButton[0].classList.add('none')
+
+                click = 0
+            }
+            click++
+        }
+
+
+    }
+
 </script>
