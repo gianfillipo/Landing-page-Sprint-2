@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./css/login_page.css">
+</head>
+
+<body>
+
+
+    </ul>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="card">
+                <div class="content">
+                </div>
+                <h1 class="titulo">Acesso</h1>
+
+                <div class="inputs-login">
+                    <input type="text" placeholder="ID funcionário">
+                    <input id="in_password" type="password" placeholder="Senha">
+                    <div id="checkbox">
+                        <img id="password_image" src="assets/hidePassword.png"
+                            style="height: 10px;" onclick="mostrarSenha()" alt="hide">
+                    </div>
+                </div>
+
+                <div class="buttons-login">
+                    <button class="btn btnGeral">Entrar</button>
+                    <a class="btn2 btnGeral" href="/cadastro1">Cadastre-se</a>
+                    <a class="hrefvoltar" href="/">Voltar</a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function mostrarSenha() {
+        
+        if (in_password.type == "password") {
+            password_image.src = "assets/showPassword.png"
+            in_password.type = "text"
+        } else {
+            password_image.src = "assets/hidePassword.png"
+            in_password.type = "password"
+        }
+    }
+</script>

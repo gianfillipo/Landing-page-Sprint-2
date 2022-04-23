@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/calculadora.css">
+    <title>Calculadora SPconsult</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            
+                <img src="../home_page/imagens_home/Logo Monitore.png" onclick="home()">
+
+            <a class="cta" href="../contact_page/contact_page.html">
+                Fale conosco
+            </a>
+        </div>
+    </div>
+
+    <div class="container_2">
+
+        <div class="calc">
+
+            <div class="card" id="in_card">
+                <div class="inputs">
+
+                    <h4>Informe o nome da empresa:</h4>
+                    <br>
+                    <input placeholder="Nome da empresa" id="inp_nome"> <br>
+
+                    <h4>Informe a média do preço do seu produto:</h4> <br>
+                    <input type=number placeholder="R$" id="inp_preço"> <br>
+
+                    <h4>Informe a quantidade de produtos fabricados(mensal):</h4> <br>
+                    <input type=number placeholder="R$" id="inp_produto"> <br>
+
+                    <h4>Informe a porcentagem de desperdicio(mensal):</h4> <br>
+                    <input type=number placeholder="%" id="inp_desperdicio"> <br>
+
+                </div>
+                <br>
+                <button class="btn1" onclick="resultado()">Ver resultado</button>
+            </div>
+            <div class="resultados_1"  id="idResultado">
+                <div class="resultado_avancar" id="div_avançar"></div>
+                <div class="resultado_calculo" id="div_calculo"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function resultado() {
+        
+        var desperdicio = Number(inp_desperdicio.value)
+        var producao = Number(inp_produto.value)
+        var preco = Number(inp_preço.value)
+        var desperdicio_producao = (producao * (desperdicio / 100)) * preco
+        var produtos_perdidos = producao * desperdicio / 100
+        var nome = (inp_nome.value)
+       
+        idResultado.classList.add("show");
+        in_card.classList.add("hide");
+
+
+        div_avançar.innerHTML = ` 
+        <p><b style="color: red;">${nome}</b>, seu desperdício médio por mês é de <b style="color: red;">
+        ${desperdicio.toFixed(1)}%</b>, com isso, sua empresa, que produz <b style="color: red;">${producao} produtos</b>, 
+        acaba perdendo por mês em torno de <b style="color: red;">
+        ${producao * (desperdicio / 100)}</b> <b>deles</b>. 
+        <br> 
+        Sendo assim, com uma média de <b style="color: red;">R$ ${producao} por kg</b> seu prejuízo seria de
+        <b style="color: red;">R$ ${produtos_perdidos.toFixed(2)}</b> <b>perdidos.</b>
+        </p>
+        <button onclick="calculo()" id="button_1">Calcule as vantagens com a Monitore</button>        
+    `
+    }
+    function calculo() {
+        var desperdicio = Number(inp_desperdicio.value)
+        var producao = Number(inp_produto.value)
+        var preco = Number(inp_preço.value)
+        var desperdicio_producao = (producao * (desperdicio / 100)) * preco
+        var produtos_perdidos = producao * desperdicio / 100
+        
+        div_calculo.classList.add("show")
+
+        div_calculo.innerHTML = ` 
+        <p>
+        Já com a nossa solução  garantimos que o percentual de desperdicio da <b style="color: green;">${inp_nome.value} diminuiria 
+        </b> pelo menos em ${desperdicio * 0.30.toFixed(1)}%, sendo assim de ${desperdicio}%  para ${desperdicio - (desperdicio * 0.30.toFixed(1))}%.
+        Com isso a empresa <b style="color: green;">deixará de perder</b> ${producao * (desperdicio / 100)} produtos.
+        Em dinheiro o que se perdia de R$ ${desperdicio_producao.toFixed(2)}, <b style="color: green;">diminuiu</b> para 
+        R$ ${desperdicio_producao - (desperdicio_producao * 0.30).toFixed(2)}, uma diminuição de 
+        R$ ${desperdicio_producao - (desperdicio_producao - (desperdicio_producao * 0.30)).toFixed(2)}
+        </p>
+        `
+    }
+    function home() {
+        window.location.href = "../home_page/home_page.html"
+    }
+</script>
