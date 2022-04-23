@@ -77,3 +77,8 @@ button{
 .btn2:hover {
     background-color: #E7E7E7;
 }
+.msg_empresa{
+    outline: 0px;
+    border: 1px solid #343434;
+    border-radius: 4px;
+}
