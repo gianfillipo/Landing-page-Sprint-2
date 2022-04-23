@@ -9,33 +9,20 @@ const porta = 8000
 // Dotenv Configure the sensitive information such as passwords 
 dotenv.config({ path: "./.env"})
 
-// Configure the mysql connection
-const database = mysql.createConnection({
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE
-})
-
-// Database
-database.connect((error)=>{
-    if(error){
-        console.log(error)
-    }else{
-        console.log("Mysql connected.")
-    }
-})
 
 
 // Routes config
-app.set('view engine', 'hbs');
-app.use(express.json());
+app.set('view engine', 'hbs'); // Define o modo de exibição das views.
+app.use(express.json()); // Serve para interpretar o json das requisições
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 var pages = require('./src/routes/pages');
+var usuario = require('./src/routes/usuario');
 
 app.use('/', pages);
+app.use('/usuario', usuario);
+
 
 app.listen(porta,()=>{
     console.log(`Server conectado na porta ${porta}`);
