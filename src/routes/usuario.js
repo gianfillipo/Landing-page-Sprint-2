@@ -12,6 +12,14 @@ router.get('/cadastro1', (req, res)=>{
 
 router.post('/cadastrarUsuario', (req,res)=>{
     controller.cadastrarUsuario(req,res);
-})
+});
+
+router.post('/cadastrarEmpresa', (req,res)=>{
+    controller.cadastrarEmpresa(req,res);
+});
+
+router.post('/logar', (req,res)=>{
+    controller.logar(req,res);
+});
 
 module.exports = router;

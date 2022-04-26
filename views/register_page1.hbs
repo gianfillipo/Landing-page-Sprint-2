@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,9 @@
     <link rel="stylesheet" href="css/register_page1.css">
 
 </head>
+
 <body>
-     </ul>
+    </ul>
     <div class="banner">
 
         <div class="container">
@@ -19,16 +21,16 @@
                 <h1 class="titulo">Registro</h1>
 
                 <div class="inputs-login">
-                
+
                     <input id="in_empresa" type="text" placeholder="Nome da empresa">
-                  
+
                     <input id="in_cnpj" type="text" placeholder="Cnpj">
-                   
-                    
+
+
                 </div>
 
                 <div class="buttons-login">
-                    <a class="btn btnGeral" href="/cadastro2">Próximo</a>
+                    <button class="btn btnGeral" onclick="cadastrarEmpresa()">Próximo</button>
                     <a href="/login" class="btn2 btnGeral">Já possui uma conta? Login</a>
                     <a class="hrefvoltar" href="/">Voltar</a>
                 </div>
@@ -39,15 +41,38 @@
     </div>
 
 </body>
+
 </html>
 <script>
-    function cadastrarEmpresa(){
-        var nome = in_nome.value
-        var empresa = in_cnpj.value
+    function cadastrarEmpresa() {
+        alert(1)
+        var empresa = in_empresa.value
+        var cnpj = in_cnpj.value
 
-        if(nome == "" || empresa == ""){
+        if (empresa == "" || cnpj == "") {
             alert("Nome vazio")
+        } else {
+
+            fetch('/usuario/cadastrarEmpresa', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    empresaServer: empresa,
+                    cnpjServer: cnpj
+                })
+            }).then((resposta) => {
+                console.log("Resposta: " + resposta)
+                if (resposta.ok) {
+                    console.log("Tudo certo")
+                    window.location = "https://www.youtube.com/shorts/v_phnakxnBw"
+                } else {
+                    throw ("Houve um erro ao realizar o cadastro.")
+                }
+            }).catch((resposta) => {
+                console.log("Houve um erro no cadastro: " + resposta)
+            });
         }
-        fetch
     }
 </script>

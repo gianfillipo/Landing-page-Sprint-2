@@ -23,7 +23,7 @@
                 <h1 class="titulo">Registro</h1>
 
                 <div class="inputs-login">
-                    <input type="text" placeholder="Insira seu ID" id="in_nome">
+                    <input type="text" placeholder="Insira o ID da empresa" id="in_nome">
                     <input type="text" placeholder="Insira seu e-mail" id="in_email">
 
                     <input id="in_password1" type="password" placeholder="Insira sua senha">
@@ -101,10 +101,12 @@
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    
+                window.location = '/login'    
                 } else {
                     throw ("Houve um erro ao tentar realizar o cadastro!");
                 }
+
+                
             }).catch((resposta) => {
                 console.log(`#ERRO: ${resposta}`);
             });

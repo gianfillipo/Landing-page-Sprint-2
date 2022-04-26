@@ -12,15 +12,14 @@ const database = mysql.createConnection({
 // Conectando ao banco de dados
 function executarData (instrucao){
     return new Promise((resolve,reject)=>{
-        database.connect()
         database.query(instrucao, (err, result)=>{
-            database.end();
             if(err){
                 reject(err)
             }
 
-            console.log(resolve);
-            resolve(resolve)
+            console.log(result);
+            resolve(result)
+            
         });
     })
 }
