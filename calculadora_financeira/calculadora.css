@@ -61,7 +61,7 @@ a.cta:hover {
     display: flex;
     justify-content: center;
     border: 2px solid red;
-    margin: auto;
+    margin:auto;
 }
 .card {
     background-color: #ffffff;
