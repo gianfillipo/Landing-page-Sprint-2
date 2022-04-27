@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link rel="stylesheet" href="css/register_page2.css">
+
+</head>
+
+<body>
+
+
+    </ul>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="card">
+                <h1 class="titulo">Registro</h1>
+
+                <div class="inputs-login">
+                    <input type="text" placeholder="Insira seu ID" id="in_nome">
+                    <input type="text" placeholder="Insira seu e-mail" id="in_email">
+
+                    <input id="in_password1" type="password" placeholder="Insira sua senha">
+                    <div class="checkbox" id="checkbox1">
+                        <img class="password_image" id="password_image1" src="assets/hidePassword.png"
+                            style="height: 10px;" onclick="mostrarSenha1()">
+                    </div>
+
+                    <input id="in_password2" type="password" placeholder="Confirme sua senha">
+                    <div class="checkbox" id="checkbox2">
+                        <img class="password_image" id="password_image2" src="assets/hidePassword.png"
+                            style="height: 10px;" onclick="mostrarSenha2()">
+                    </div>
+
+                </div>
+
+                <div class="buttons-login">
+                    <button class="btn btnGeral" onclick="cadastrarUsuario()">Criar conta</button>
+                    <a href="/login" class="btn2 btnGeral">Já possui uma conta? Login</a>
+                    <a class="hrefvoltar" href="/cadastro1">Voltar</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function mostrarSenha1() {
+
+        if (in_password1.type == "password") {
+            password_image1.src = "assets/showPassword.png"
+            in_password1.type = "text"
+        } else {
+            password_image1.src = "assets/hidePassword.png"
+            in_password1.type = "password"
+        }
+    }
+
+    function mostrarSenha2() {
+
+        if (in_password2.type == "password") {
+            password_image2.src = "assets/showPassword.png"
+            in_password2.type = "text"
+        } else {
+            password_image2.src = "assets/hidePassword.png"
+            in_password2.type = "password"
+        }
+    }
+
+    function cadastrarUsuario() {
+        alert(1)
+
+        var nomeVar = in_nome.value
+        var emailVar = in_email.value
+        var senhaVar = in_password1.value
+
+        
+
+            fetch("/usuario/cadastrarUsuario", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then((resposta) => {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch((resposta) => {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+            return false;
+        }
+    
+
+</script>
